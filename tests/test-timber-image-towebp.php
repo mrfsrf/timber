@@ -24,6 +24,11 @@ class TestTimberImageToWEBP extends Timber_UnitTestCase
 
     public function testCwebpTIFtoWEB()
     {
+        $binary_path = '/opt/homebrew/bin/cwebp';
+        if (!file_exists($binary_path)) {
+            $this->markTestSkipped('cwebp binary not available at ' . $binary_path);
+        }
+
         add_filter('webp_converter_engine', fn ($engine) => 'cwebp');
         add_filter('webp_cwebp_path', fn ($path) => '/opt/homebrew/bin/cwebp');
 
