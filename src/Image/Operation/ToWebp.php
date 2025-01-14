@@ -5,6 +5,7 @@ namespace Timber\Image\Operation;
 use Timber\Image\Converter\CWebPConverter;
 use Timber\Image\Converter\GDConverter;
 use Timber\Image\Converter\ImagickConverter;
+use Timber\Image\Converter\IConverter;
 use Timber\Image\Operation as ImageOperation;
 use Timber\ImageHelper;
 
